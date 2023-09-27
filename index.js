@@ -25,4 +25,5 @@ const start = async () => {
     }
 };
 
+module.exports = app;
 start();

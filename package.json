@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon index.js"
   },
-  "author": "Alexandr Bushuev, Kamil Khabibullin",
+  "author": "Alexandr Bushuev, Kamil Khabibullin, Sofia Iakovleva",
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
@@ -15,11 +15,14 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.7.0",
+    "jest": "^29.7.0",
     "jsonwebtoken": "9.0.0",
     "mongodb": "^6.1.0",
     "mongoose": "^5.11.4",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "supertest": "^6.3.3"
   }
 }
