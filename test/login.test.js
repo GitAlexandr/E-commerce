@@ -1,16 +1,14 @@
 const request = require('supertest');
-const app = require('../index'); // Adjust the path to your app's entry file if needed
+const app = require('../index');
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 
-// Define a test user
 const testUser = {
     username: 'testuser',
-    password: 'testpassword', // Password before hashing
+    password: 'testpassword', 
 };
 
 beforeAll(async () => {
-    // Create and save the test user before running tests
     const hashPassword = bcrypt.hashSync(testUser.password, 7);
     const user = new User({
         username: testUser.username,
@@ -52,6 +50,5 @@ describe('POST /auth/login', () => {
 });
 
 afterAll(async () => {
-    // Clean up by removing the test user
     await User.findOneAndDelete({ username: testUser.username });
 });
