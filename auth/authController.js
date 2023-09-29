@@ -58,8 +58,8 @@ class authController {
 
     async getUsers(req, res) {
         try {
-            const users = await User.find()
-            res.json(users)
+            const users = await User.find({}, { _id: 0 })
+            res.status(200).json({status: true, message: 'Вот список пользователей', data: users})
         } catch (e) {
             console.log(e)
         }

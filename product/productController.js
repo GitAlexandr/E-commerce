@@ -20,10 +20,14 @@ class productController{
 
     async getProducts(req, res){
         try{
-            const products = await Product.find()
-            res.json(products)
-        } catch (e){
-            console.log(e)
+            const products = await Product.find({}, { _id: 0 })
+            res.status(200).json({status: true, message: 'Вот список актуальных товаров', data: products})
+        } catch (e) {
+            res.status(500).json({
+                status: false,
+                error: 'Internal Server Error',
+                message: 'Failed to retrieve products'
+            })
         }
     }
 }
