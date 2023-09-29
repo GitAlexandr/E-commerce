@@ -1,5 +1,4 @@
-const Router = require('express')
-const router = new Router()
+const router = require("express").Router();
 const controller = require('./authController')
 const {check} = require("express-validator")
 const authMiddleware = require('../access/authAccess')

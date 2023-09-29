@@ -1,5 +1,4 @@
-const Router = require('express')
-const router = new Router()
+const router = require("express").Router();
 const controller = require('./productController')
 const {check} = require("express-validator")
 const Role = require('../models/Role')
