@@ -27,18 +27,17 @@ describe('POST /product-add', () => {
         await Product.deleteMany({ title: testProduct.title });
     });
 
-    it('should return 409 Conflict for duplicate product', async () => {
+    it('should return 201 for duplicate product', async () => {
         const response = await request(app)
             .post('/product-add')
-            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NTkyNzk0MiwiZXhwIjoxNjk2MDE0MzQyfQ.2yjfKjsklbal-rjOMRuSa0oes0njeepnSSn09zf5CcM`)
+            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NTk5MTc4MiwiZXhwIjoxNjk2MDc4MTgyfQ.yXLlnw7O7jsnFOrCNepY0PGjm-Etwb5B_lm69c2EFKE`)
             .send(testProduct);
 
         expect(response.status).toBe(201);
-        expect(response.body.status).toBe(true); // Assuming you return a 'status' field in your response
+        expect(response.body.status).toBe(true); 
         if ('error' in response.body) {
-            expect(response.body.error).toBe('Conflict'); // Assuming you return an 'error' field in your response
+            expect(response.body.error).toBe('Conflict');
         }
-        // expect(response.body.message).toBe("Товар с таким названием уже существует"); // Assuming you return a 'message' field in your response
     });
     beforeEach(async () => {
         await Product.deleteMany({ title: testProduct.title });
@@ -47,7 +46,7 @@ describe('POST /product-add', () => {
     it('should add product with valid credentials', async () => {
         const response = await request(app)
             .post('/product-add')
-            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NTkyNzk0MiwiZXhwIjoxNjk2MDE0MzQyfQ.2yjfKjsklbal-rjOMRuSa0oes0njeepnSSn09zf5CcM`)
+            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NTk5MTc4MiwiZXhwIjoxNjk2MDc4MTgyfQ.yXLlnw7O7jsnFOrCNepY0PGjm-Etwb5B_lm69c2EFKE`)
             .send(testProduct);
 
         expect(response.status).toBe(201);
