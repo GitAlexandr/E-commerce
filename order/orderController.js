@@ -7,7 +7,7 @@ class orderController{
 
         try {
             const savedOrder = await newOrder.save();
-            res.status(200).json(savedOrder);
+            res.status(201).json({status: true, message: "Заказ успешно добавлен" },savedOrder);
         } catch (err) {
             res.status(500).json(err);
         }
@@ -21,7 +21,7 @@ class orderController{
                 },
                 { new: true }
             );
-            res.status(200).json(updatedOrder);
+            res.status(201).json({status: true, message: "Заказ успешно обновлен" },updatedOrder);
         } catch (err) {
             res.status(500).json(err);
         }
@@ -30,7 +30,7 @@ class orderController{
     async deleteOrder(req, res){
         try {
             await Order.findByIdAndDelete(req.params.id);
-            res.status(200).json("Cart has been deleted...");
+            res.status(201).json({status: true, message: "Заказ успешно удален" });
         } catch (err) {
             res.status(500).json(err);
         }
@@ -38,18 +38,18 @@ class orderController{
     async getUserOrders(req, res){
         try {
             const cart = await Order.findOne({ userId: req.params.userId });
-            res.status(200).json(cart);
+            res.json(cart);
         } catch (err) {
-            res.status(500).json(err);
+            console.log(err)
         }
     }
 
     async getAllOrders(req, res){
         try {
             const carts = await Order.find();
-            res.status(200).json(carts);
+            res.json(carts);
         } catch (err) {
-            res.status(500).json(err);
+            console.log(err)
         }
     }
 
