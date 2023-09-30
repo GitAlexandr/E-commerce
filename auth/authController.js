@@ -61,7 +61,11 @@ class authController {
             const users = await User.find({}, { _id: 0 })
             res.status(200).json({status: true, message: 'Вот список пользователей', data: users})
         } catch (e) {
-            console.log(e)
+            res.status(500).json({
+                status: false,
+                error: 'Internal Server Error',
+                message: 'Failed to retrieve users'
+            })
         }
     }
 }
