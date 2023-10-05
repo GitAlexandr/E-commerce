@@ -12,6 +12,7 @@ const testUser = {
 beforeAll(async () => {
     jest.setTimeout(40000);
 
+    
     await User.deleteMany({username: testUser.username})
 
     const hashPassword = bcrypt.hashSync(testUser.password, 7);
