@@ -30,7 +30,7 @@ describe('POST /product-add', () => {
     it('should return 201 for duplicate product', async () => {
         const response = await request(app)
             .post('/product-add')
-            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjUxODE5MSwiZXhwIjoxNjk2NjA0NTkxfQ.f_7HnWtaWNAMXLWbpuaOTNYXrZr-bI445GdzMWddhLE`)
+            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjU4MzM0NywiZXhwIjoxNjk2NjY5NzQ3fQ.yxdHyX40ZThsNEZJTNakhM6pAVCC0TI1KwZgrH0jmgE`)
             .send(testProduct);
 
         expect(response.status).toBe(201);
@@ -46,7 +46,7 @@ describe('POST /product-add', () => {
     it('should add product with valid credentials', async () => {
         const response = await request(app)
             .post('/product-add')
-            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjUxODE5MSwiZXhwIjoxNjk2NjA0NTkxfQ.f_7HnWtaWNAMXLWbpuaOTNYXrZr-bI445GdzMWddhLE`)
+            .set("Authorization", `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjU4MzM0NywiZXhwIjoxNjk2NjY5NzQ3fQ.yxdHyX40ZThsNEZJTNakhM6pAVCC0TI1KwZgrH0jmgE`)
             .send(testProduct);
 
         expect(response.status).toBe(201);

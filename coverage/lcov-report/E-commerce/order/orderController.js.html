@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">26.85% </span>
+                <span class="strong">19.44% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>29/108</span>
+                <span class='fraction'>21/108</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">26.85% </span>
+                <span class="strong">19.44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>29/108</span>
+                <span class='fraction'>21/108</span>
             </div>
         
             
@@ -176,24 +176,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -208,6 +190,24 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -221,17 +221,17 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -283,20 +283,20 @@
 &nbsp;
 &nbsp;
 class orderController{
-    async newOrder(req, res) {
-        const newOrder = new Order(req.body);
-&nbsp;
-        try {
-            const savedOrder = await newOrder.save();
-            res.status(201).json({status: true, message: "Заказ успешно добавлен" },savedOrder);
-        } catch (err) {
-            res.status(500).json({
-                status: false,
-                error: 'Internal Server Error',
-                message: 'Failed to create order'
-            })
-        }
-    }
+<span class="fstat-no" title="function not covered" >    async newOrder(req, res) {</span>
+<span class="cstat-no" title="statement not covered" >        const newOrder = new Order(req.body);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            const savedOrder = await newOrder.save();</span>
+<span class="cstat-no" title="statement not covered" >            res.status(201).json({status: true, message: "Заказ успешно добавлен" },savedOrder);</span>
+<span class="cstat-no" title="statement not covered" >        } catch (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(500).json({</span>
+<span class="cstat-no" title="statement not covered" >                status: false,</span>
+<span class="cstat-no" title="statement not covered" >                error: 'Internal Server Error',</span>
+<span class="cstat-no" title="statement not covered" >                message: 'Failed to create order'</span>
+<span class="cstat-no" title="statement not covered" >            })</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
 <span class="fstat-no" title="function not covered" >    async updatedOrder(req, res){</span>
 <span class="cstat-no" title="statement not covered" >        try {</span>
 <span class="cstat-no" title="statement not covered" >            const updatedOrder = await Order.findByIdAndUpdate(</span>
@@ -328,18 +328,18 @@ class orderController{
 <span class="cstat-no" title="statement not covered" >            })</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
-<span class="fstat-no" title="function not covered" >    async getUserOrders(req, res){</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            const cart = await Order.findOne({ userId: req.params.userId });</span>
-<span class="cstat-no" title="statement not covered" >            res.json(cart);</span>
-<span class="cstat-no" title="statement not covered" >        } catch (err) {</span>
+    async getUserOrders(req, res){
+        try {
+            const cart = await Order.findOne({ userId: req.params.userId });
+            res.json(cart);
+        } <span class="branch-0 cbranch-no" title="branch not covered" >catch (err) {</span>
 <span class="cstat-no" title="statement not covered" >            res.status(500).json({</span>
 <span class="cstat-no" title="statement not covered" >                status: false,</span>
 <span class="cstat-no" title="statement not covered" >                error: 'Internal Server Error',</span>
 <span class="cstat-no" title="statement not covered" >                message: 'Failed to get user orders'</span>
 <span class="cstat-no" title="statement not covered" >            })</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    async getAllOrders(req, res){</span>
 <span class="cstat-no" title="statement not covered" >        try {</span>
@@ -394,7 +394,7 @@ module.exports = new orderController()
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-05T20:25:41.641Z
+                at 2023-10-06T22:03:34.016Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

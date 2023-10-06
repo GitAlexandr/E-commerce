@@ -5,7 +5,7 @@ const app = require('../index')
 // });
 describe('GET /orders', () => {
     it('should get orders', async () => {
-        const adminToken = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjUzNDg4NywiZXhwIjoxNjk2NjIxMjg3fQ.X8TEprS-132SDKEOi-ktOLIFVHKARSQmE8n1peiAWw4';
+        const adminToken = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjU4MzM0NywiZXhwIjoxNjk2NjY5NzQ3fQ.yxdHyX40ZThsNEZJTNakhM6pAVCC0TI1KwZgrH0jmgE';
 
         const response = await request(app)
             .get('/orders')
