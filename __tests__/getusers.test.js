@@ -7,7 +7,7 @@ beforeAll(async () => {
 });
 describe('GET /auth/users', () => {
     it("should get users for admin", async () => {
-        const adminToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjU4MzM0NywiZXhwIjoxNjk2NjY5NzQ3fQ.yxdHyX40ZThsNEZJTNakhM6pAVCC0TI1KwZgrH0jmgE";
+        const adminToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NjY3NDMwNSwiZXhwIjoxNjk2NzYwNzA1fQ.nIba1Eh4um5ktkJfA56Y8f3_99BJmGtwEbHDT6Im0es";
 
         const response = await request(app)
             .get('/auth/users')
