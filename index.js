@@ -4,6 +4,7 @@ const authRouter = require('./auth/authRouter');
 const productRouter = require('./product/productRouter');
 const orderRouter = require('./order/orderRouter');
 const PORT = process.env.PORT || 3000;
+const IP = '100.71.97.183';
 
 const app = express();
 
@@ -20,7 +21,7 @@ const start = async () => {
             useCreateIndex: true,
         });
 
-        app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+        app.listen(PORT, IP, () => console.log(`Server started on port ${PORT}`));
     } catch (e) {
         console.error(e);
     }
