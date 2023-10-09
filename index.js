@@ -4,7 +4,7 @@ const authRouter = require('./auth/authRouter');
 const productRouter = require('./product/productRouter');
 const orderRouter = require('./order/orderRouter');
 const PORT = process.env.PORT || 3000;
-const IP = '100.71.97.183';
+const IP = 'localhost';
 
 const app = express();
 
