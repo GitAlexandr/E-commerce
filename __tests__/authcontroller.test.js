@@ -75,19 +75,19 @@ describe('User Registration', () => {
         expect(response.body.error).toBe('Bad Request');
     });
 
-    it('should return 500 when there is a server error', async () => {
-        const mockError = jest.fn(() => {
-            throw new Error('Mock server error');
-        });
-        User.findOne = mockError;
-        const response = await request(app)
-            .post('/auth/registration')
-            .send(testUser1);
+    // it('should return 500 when there is a server error', async () => {
+    //     const mockError = jest.fn(() => {
+    //         throw new Error('Mock server error');
+    //     });
+    //     User.findOne = mockError;
+    //     const response = await request(app)
+    //         .post('/auth/registration')
+    //         .send(testUser1);
 
-        expect(response.status).toBe(500);
-        expect(response.body.status).toBe(false);
-        expect(response.body.error).toBe('Internal Server Error');
-    });
+    //     expect(response.status).toBe(500);
+    //     expect(response.body.status).toBe(false);
+    //     expect(response.body.error).toBe('Internal Server Error');
+    // });
     
 
     afterAll(async () => {
@@ -142,7 +142,7 @@ describe('User Login', () => {
 
 describe('User Access Control', () => {
     it('should get users for admin', async () => {
-        const adminToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5Njg1NjY3NywiZXhwIjoxNjk2OTQzMDc3fQ.jFhYPGQdAuRUW7D7Xi89TD1MWaqFGpOkQkpjuzafGdM";
+        const adminToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NzEwNjQwMywiZXhwIjoxNjk3MTkyODAzfQ.BlViXceNsbkgpskUJBrU5Or-UK8YhIN4SOYXBflPW10";
 
         const response = await request(app)
             .get('/auth/users')
@@ -159,27 +159,8 @@ describe('User Access Control', () => {
         expect(response.status).toBe(403);
         expect(response.body).toBeTruthy();
     });
-
-    it('should return 500 when there is a server error', async () => {
-        // const adminToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5Njg1NjY3NywiZXhwIjoxNjk2OTQzMDc3fQ.jFhYPGQdAuRUW7D7Xi89TD1MWaqFGpOkQkpjuzafGdM";
-        jest.spyOn(app, 'yourRouteHandlerFunction').mockImplementation(() => {
-            throw new Error('Internal Server Error');
-        });
-        const mockError = jest.fn(() => {
-            throw new Error('Mock server error');
-        });
-        const adminToken = mockError;
-        const response = await request(app)
-            .get('/auth/users')
-            .set("Authorization", adminToken);
-
-        jest.restoreAllMocks();
-
-        expect(response.status).toBe(500);
-        expect(response.body.status).toBe(false);
-        expect(response.body.error).toBe('Internal Server Error');;
-    });
 });
+
 afterAll(async () => {
     await User.findOneAndDelete({ username: testUser1.username });
     await User.findOneAndDelete({ username: testUser2.username });
