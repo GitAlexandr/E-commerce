@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1697106828688" clover="3.2.0">
-  <project timestamp="1697106828689" name="All files">
-    <metrics statements="407" coveredstatements="366" conditionals="43" coveredconditionals="37" methods="15" coveredmethods="14" elements="465" coveredelements="417" complexity="0" loc="407" ncloc="407" packages="6" files="14" classes="14"/>
+<coverage generated="1697116901976" clover="3.2.0">
+  <project timestamp="1697116901977" name="All files">
+    <metrics statements="407" coveredstatements="383" conditionals="47" coveredconditionals="39" methods="15" coveredmethods="15" elements="469" coveredelements="437" complexity="0" loc="407" ncloc="407" packages="6" files="14" classes="14"/>
     <package name="E-commerce">
       <metrics statements="31" coveredstatements="29" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="index.js" path="/home/sirius/Рабочий стол/sirius_js/E-commerce/index.js">
@@ -40,37 +40,37 @@
       </file>
     </package>
     <package name="E-commerce.access">
-      <metrics statements="60" coveredstatements="30" conditionals="8" coveredconditionals="5" methods="2" coveredmethods="1"/>
+      <metrics statements="60" coveredstatements="47" conditionals="12" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="authAccess.js" path="/home/sirius/Рабочий стол/sirius_js/E-commerce/access/authAccess.js">
-        <metrics statements="28" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="28" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
       </file>
       <file name="roleAccess.js" path="/home/sirius/Рабочий стол/sirius_js/E-commerce/access/roleAccess.js">
         <metrics statements="32" coveredstatements="26" conditionals="8" coveredconditionals="5" methods="1" coveredmethods="1"/>
