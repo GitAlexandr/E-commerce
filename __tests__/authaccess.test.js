@@ -13,8 +13,8 @@ app.get('/protected', authMiddleware, (req, res) => {
 });
 
 describe('Authentication Middleware', () => {
-  const validToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NzEwNjQwMywiZXhwIjoxNjk3MTkyODAzfQ.BlViXceNsbkgpskUJBrU5Or-UK8YhIN4SOYXBflPW10'; // Replace with a valid token for testing
-  const invalidToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NzEwNjQwMywiZXhwIjoxNjk3MTkyODAzfQ.BlViXceNsbkgpskUJBrU5Or-UK8YhIN4SOYXBflPW12'; // Replace with an invalid token for testing
+  const validToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NzI2ODYyMywiZXhwIjoxNjk3MzU1MDIzfQ.OUY_QBaFQ5BV8xvscTi5mvdKs9Wm_TbmxZIkd0KXea8'; 
+  const invalidToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTViZTkxNzIyNjBhODQ0MjU3YWIyNSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY5NzEwNjQwMywiZXhwIjoxNjk3MTkyODAzfQ.BlViXceNsbkgpskUJBrU5Or-UK8YhIN4SOYXBflPW12'; 
 
   it('should call next() for authorized requests', async () => {
     const res = await request(app)
