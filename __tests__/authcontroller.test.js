@@ -74,20 +74,6 @@ describe('User Registration', () => {
         expect(response.body.status).toBe(false);
         expect(response.body.error).toBe('Bad Request');
     });
-
-    // it('should return 500 when there is a server error', async () => {
-    //     const mockError = jest.fn(() => {
-    //         throw new Error('Mock server error');
-    //     });
-    //     User.findOne = mockError;
-    //     const response = await request(app)
-    //         .post('/auth/registration')
-    //         .send(testUser1);
-
-    //     expect(response.status).toBe(500);
-    //     expect(response.body.status).toBe(false);
-    //     expect(response.body.error).toBe('Internal Server Error');
-    // });
     
 
     afterAll(async () => {

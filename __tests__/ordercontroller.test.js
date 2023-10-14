@@ -6,7 +6,8 @@ jest.mock('../models/Order');
 describe('newOrder', () => {
   it('should create a new order', async () => {
     const req = {
-      body: { /* provide the request body */ },
+      body: {
+      },
     };
     const res = {
       status: jest.fn().mockReturnThis(),
@@ -27,7 +28,8 @@ describe('newOrder', () => {
 
   it('should handle errors when creating a new order', async () => {
     const req = {
-      body: { /* provide the request body */ },
+      body: { 
+       },
     };
     const res = {
       status: jest.fn().mockReturnThis(),
@@ -53,7 +55,8 @@ describe('updatedOrder', () => {
     it('should update an order', async () => {
       const req = {
         params: { id: 'mockOrderId' },
-        body: { /* provide the update data */ },
+        body: {
+        },
       };
       const res = {
         status: jest.fn().mockReturnThis(),
@@ -76,7 +79,8 @@ describe('updatedOrder', () => {
     it('should handle errors when updating an order', async () => {
       const req = {
         params: { id: 'mockOrderId' },
-        body: { /* provide the update data */ },
+        body: {
+        },
       };
       const res = {
         status: jest.fn().mockReturnThis(),
