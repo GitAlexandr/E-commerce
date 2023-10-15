@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/35</span>
+                <span class='fraction'>35/35</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/35</span>
+                <span class='fraction'>35/35</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,67 +102,67 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const Product = require('../models/Product')
 &nbsp;
 &nbsp;
 class productController{
-<span class="fstat-no" title="function not covered" >    async addProducts(req, res) {</span>
-<span class="cstat-no" title="statement not covered" >        try{</span>
-<span class="cstat-no" title="statement not covered" >                const {title, description, price} = req.body;</span>
-<span class="cstat-no" title="statement not covered" >                const candidate = await Product.findOne({title})</span>
-<span class="cstat-no" title="statement not covered" >                if (candidate) {</span>
-<span class="cstat-no" title="statement not covered" >                    return res.status(409).json({status: false, error: 'Conflict', message: "Товар с таким названием уже существует"})</span>
-<span class="cstat-no" title="statement not covered" >                }</span>
-<span class="cstat-no" title="statement not covered" >                const product = new Product({title, description, price})</span>
-<span class="cstat-no" title="statement not covered" >                await product.save()</span>
-<span class="cstat-no" title="statement not covered" >                return res.status(201).json({status: true, message: "Товар успешно добавлен" });</span>
-<span class="cstat-no" title="statement not covered" >        } catch (e){</span>
-<span class="cstat-no" title="statement not covered" >            console.log(e)</span>
-<span class="cstat-no" title="statement not covered" >            res.status(500).json({status: false, error: 'Internal Server Error', message: 'Add error'})</span>
-<span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    async addProducts(req, res) {
+        try{
+                const {title, description, price} = req.body;
+                const candidate = await Product.findOne({title})
+                if (candidate) {
+                    return res.status(409).json({status: false, error: 'Conflict', message: "Товар с таким названием уже существует"})
+                }
+                const product = new Product({title, description, price})
+                await product.save()
+                return res.status(201).json({status: true, message: "Товар успешно добавлен" });
+        } catch (e){
+            console.log(e)
+            res.status(500).json({status: false, error: 'Internal Server Error', message: 'Add error'})
+        }
+    }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    async getProducts(req, res){</span>
-<span class="cstat-no" title="statement not covered" >        try{</span>
-<span class="cstat-no" title="statement not covered" >            const products = await Product.find({}, { _id: 0 })</span>
-<span class="cstat-no" title="statement not covered" >            res.status(200).json({status: true, message: 'Вот список актуальных товаров', data: products})</span>
-<span class="cstat-no" title="statement not covered" >        } catch (e) {</span>
-<span class="cstat-no" title="statement not covered" >            res.status(500).json({</span>
-<span class="cstat-no" title="statement not covered" >                status: false,</span>
-<span class="cstat-no" title="statement not covered" >                error: 'Internal Server Error',</span>
-<span class="cstat-no" title="statement not covered" >                message: 'Failed to retrieve products'</span>
-<span class="cstat-no" title="statement not covered" >            })</span>
-<span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    async getProducts(req, res){
+        try{
+            const products = await Product.find({}, { _id: 0 })
+            res.status(200).json({status: true, message: 'Вот список актуальных товаров', data: products})
+        } catch (e) {
+            res.status(500).json({
+                status: false,
+                error: 'Internal Server Error',
+                message: 'Failed to retrieve products'
+            })
+        }
+    }
 }
 &nbsp;
 module.exports = new productController()</pre></td></tr></table></pre>
@@ -172,7 +172,7 @@ module.exports = new productController()</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-06T22:03:34.016Z
+                at 2023-10-12T13:21:41.935Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
