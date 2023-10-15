@@ -1,0 +1,12 @@
+version: '3.8'
+services:  
+  app:    
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4005:4005"
+    volumes:     
+      - /home/sirius5/e-commerce/E-commerce:/app      
+      - /home/sirius5/e-commerce/E-commerce/node_modules
+      

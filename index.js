@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 const authRouter = require('./auth/authRouter');
 const productRouter = require('./product/productRouter');
 const orderRouter = require('./order/orderRouter');
-const PORT = process.env.PORT || 3000;
-const IP = '100.71.97.183';
-
+const PORT = 4005;
+const IP = "0.0.0.0";
 const app = express();
 
 app.use(express.json());
@@ -21,11 +20,10 @@ const start = async () => {
             useCreateIndex: true,
         });
 
-        app.listen(PORT, IP, () => console.log(`Server started on port ${PORT}`));
+        app.listen(PORT, IP, () => console.log(`Server started on ${IP}:${PORT}`));
     } catch (e) {
         console.error(e);
     }
 };
 
-module.exports = app;
 start();
